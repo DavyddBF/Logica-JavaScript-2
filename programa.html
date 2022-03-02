@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    
+    var canvas = document.querySelector('canvas');
+    var pincel = canvas.getContext('2d');
+
+    // 'Pincel' variável que salva o canvas, onde há o desenho!
+    pincel.fillStyle = 'lightgrey'; // tinta
+    pincel.fillRect(0, 0, 600, 400); // inicio e tamanho da tela
+    
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400); // 200 largura, 400 altura
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400); // 1° '0' inicio do retângulo, 2° '0' final retângulo
+    
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 200);
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel.fill();
+
+</script>
